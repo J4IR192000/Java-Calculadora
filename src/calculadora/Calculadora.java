@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package calculadora;
-
+/**
+ *
+ * @author J4IR192000
+ */
+import com.formdev.flatlaf.FlatIntelliJLaf;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -28,6 +32,11 @@ public class Calculadora {
 //        n2 = reader.nextInt();
 //        r=n1+n2;
 //        System.out.println("La suma da como resultado: "+r);
+        try {
+            FlatIntelliJLaf.setup();
+        } catch (Exception ex) {
+            System.err.println("Failed to initialize LaF");
+        }
         Interfaz obj = new Interfaz();
         obj.setVisible(true);
     }
