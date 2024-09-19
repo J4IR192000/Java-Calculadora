@@ -9,6 +9,8 @@ package calculadora;
  */
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import java.util.Scanner;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class Calculadora {
 
@@ -33,8 +35,9 @@ public class Calculadora {
 //        r=n1+n2;
 //        System.out.println("La suma da como resultado: "+r);
         try {
-            FlatIntelliJLaf.setup();
-        } catch (Exception ex) {
+            UIManager.setLookAndFeel( new FlatIntelliJLaf() );
+            UIManager.put( "Button.arc", 100 );
+        } catch (UnsupportedLookAndFeelException ex) {
             System.err.println("Failed to initialize LaF");
         }
         Interfaz obj = new Interfaz();
