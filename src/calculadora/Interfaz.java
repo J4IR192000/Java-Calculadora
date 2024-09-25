@@ -23,6 +23,7 @@ public class Interfaz extends javax.swing.JFrame {
         initComponents();
         UIManager.put( "Button.arc", 999 );
     }
+    String texto, operacion;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,6 +55,7 @@ public class Interfaz extends javax.swing.JFrame {
         jButton36 = new javax.swing.JButton();
         jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
+        Operacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -67,95 +69,187 @@ public class Interfaz extends javax.swing.JFrame {
 
         jButton19.setBackground(new java.awt.Color(204, 204, 204));
         jButton19.setFont(new java.awt.Font("Verdana", 1, 15)); // NOI18N
+        jButton19.setForeground(new java.awt.Color(255, 255, 255));
         jButton19.setText("AC");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
 
         jButton21.setBackground(new java.awt.Color(204, 204, 204));
         jButton21.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButton21.setForeground(new java.awt.Color(255, 255, 255));
         jButton21.setText("+/-");
 
         jButton22.setBackground(new java.awt.Color(204, 204, 204));
         jButton22.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jButton22.setForeground(new java.awt.Color(255, 255, 255));
         jButton22.setText("%");
 
         jButton23.setBackground(new java.awt.Color(255, 204, 0));
         jButton23.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton23.setForeground(new java.awt.Color(255, 255, 255));
         jButton23.setText("/");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
 
         jButton24.setBackground(new java.awt.Color(102, 102, 102));
         jButton24.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton24.setForeground(new java.awt.Color(255, 255, 255));
         jButton24.setText("7");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
 
         jButton25.setBackground(new java.awt.Color(102, 102, 102));
         jButton25.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton25.setForeground(new java.awt.Color(255, 255, 255));
         jButton25.setText("8");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
 
         jButton26.setBackground(new java.awt.Color(102, 102, 102));
         jButton26.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton26.setForeground(new java.awt.Color(255, 255, 255));
         jButton26.setText("9");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
 
         jButton27.setBackground(new java.awt.Color(255, 204, 0));
         jButton27.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton27.setForeground(new java.awt.Color(255, 255, 255));
         jButton27.setText("X");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
         jButton28.setBackground(new java.awt.Color(102, 102, 102));
         jButton28.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton28.setForeground(new java.awt.Color(255, 255, 255));
         jButton28.setText("6");
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
 
         jButton29.setBackground(new java.awt.Color(102, 102, 102));
         jButton29.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton29.setForeground(new java.awt.Color(255, 255, 255));
         jButton29.setText("4");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
 
         jButton30.setBackground(new java.awt.Color(102, 102, 102));
         jButton30.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton30.setForeground(new java.awt.Color(255, 255, 255));
         jButton30.setText("5");
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
 
         jButton31.setBackground(new java.awt.Color(102, 102, 102));
         jButton31.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton31.setForeground(new java.awt.Color(255, 255, 255));
         jButton31.setText("3");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
 
         jButton32.setBackground(new java.awt.Color(102, 102, 102));
         jButton32.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton32.setForeground(new java.awt.Color(255, 255, 255));
         jButton32.setText("1");
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
 
         jButton33.setBackground(new java.awt.Color(102, 102, 102));
         jButton33.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton33.setForeground(new java.awt.Color(255, 255, 255));
         jButton33.setText("2");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
 
         jButton34.setBackground(new java.awt.Color(255, 204, 0));
         jButton34.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton34.setForeground(new java.awt.Color(255, 255, 255));
         jButton34.setText("-");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
 
         jButton35.setBackground(new java.awt.Color(255, 204, 0));
         jButton35.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton35.setForeground(new java.awt.Color(255, 255, 255));
         jButton35.setText("+");
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
 
         jButton36.setBackground(new java.awt.Color(255, 204, 0));
         jButton36.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton36.setForeground(new java.awt.Color(255, 255, 255));
         jButton36.setText("=");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
 
         jButton37.setBackground(new java.awt.Color(102, 102, 102));
         jButton37.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton37.setForeground(new java.awt.Color(255, 255, 255));
         jButton37.setText(".");
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
 
         jButton38.setBackground(new java.awt.Color(102, 102, 102));
         jButton38.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton38.setForeground(new java.awt.Color(255, 255, 255));
         jButton38.setText("0");
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
+
+        Operacion.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        Operacion.setForeground(new java.awt.Color(204, 204, 204));
+        Operacion.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -209,13 +303,16 @@ public class Interfaz extends javax.swing.JFrame {
                             .addComponent(jButton27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Operacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(Operacion, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Numeros, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,12 +357,243 @@ public class Interfaz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "1";
+        }else{
+            texto = texto+"1";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "2";
+        }else{
+            texto = texto+"2";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        texto = Numeros.getText();
+        if (!texto.equals("0")) {
+            texto = texto+"0";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "3";
+        }else{
+            texto = texto+"3";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "4";
+        }else{
+            texto = texto+"4";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "5";
+        }else{
+            texto = texto+"5";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "6";
+        }else{
+            texto = texto+"6";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "7";
+        }else{
+            texto = texto+"7";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "8";
+        }else{
+            texto = texto+"8";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.equals("0")) {
+            texto = "9";
+        }else{
+            texto = texto+"9";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        
+        texto = texto+".";
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton37ActionPerformed
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.endsWith("+")) {
+            // Si el texto termina en '+', no se hace nada
+        } else if (texto.endsWith("-")) {
+            // Si el texto termina en '-', agregar '+'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "+";
+        } else if (texto.endsWith("x")) {
+            // Si el texto termina en 'x', agregar '+'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "+";
+        } else if (texto.endsWith("/")) {
+            // Si el texto termina en '/', agregar '+'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "+";
+        } else {
+            // Si no termina en '+' se agrega
+            texto = texto + "+";
+        } 
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.endsWith("-")) {
+            // Si el texto termina en '-', no se hace nada
+        } else if (texto.endsWith("+")) {
+            // Si el texto termina en '+', agregar '-'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "-";
+        } else if (texto.endsWith("x")) {
+            // Si el texto termina en 'x', agregar '-'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "-";
+        } else if (texto.endsWith("/")) {
+            // Si el texto termina en '/', agregar '-'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "-";
+        } else {
+            // Si no termina en '-' se agrega
+            texto = texto + "-";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.endsWith("x")) {
+            // Si el texto termina en 'x', no se hace nada
+        } else if (texto.endsWith("+")) {
+            // Si el texto termina en '+', agregar 'x'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "x";
+        } else if (texto.endsWith("-")) {
+            // Si el texto termina en '-', agregar 'x'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "x";
+        } else if (texto.endsWith("/")) {
+            // Si el texto termina en '/', agregar 'x'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "x";
+        } else {
+            // Si no termina en 'x' se agrega
+            texto = texto + "x";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        if (texto.endsWith("/")) {
+            // Si el texto termina en '/', no se hace nada
+        } else if (texto.endsWith("+")) {
+            // Si el texto termina en '+', agregar '/'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "/";
+        } else if (texto.endsWith("x")) {
+            // Si el texto termina en 'x', agregar '/'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "/";
+        } else if (texto.endsWith("-")) {
+            // Si el texto termina en '/', agregar '/'
+            texto = texto.substring(0, texto.length() - 1);
+            texto = texto + "/";
+        } else {
+            // Si no termina en '/' se agrega
+            texto = texto + "/";
+        }
+        Numeros.setText(texto);
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        Numeros.setText("0");
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+        // TODO add your handling code here:
+        texto = Numeros.getText();
+        float n1,n2,resultado;
+        String part1, part2, resultadoString;
+        
+        String[] parts = texto.split("\\+");
+        part1 = parts[0]; // 123
+        part2 = parts[1]; // 654
+        n1 = Float.parseFloat(part1);
+        n2 = Float.parseFloat(part2);
+        resultado = n1+n2;
+        resultadoString = String.valueOf(resultado);
+        Operacion.setText(texto);
+        Numeros.setText(resultadoString);
+        
+    }//GEN-LAST:event_jButton36ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,6 +632,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Numeros;
+    private javax.swing.JLabel Operacion;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
